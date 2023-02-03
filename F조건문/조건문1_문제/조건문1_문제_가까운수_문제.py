@@ -24,3 +24,4 @@ if b-a<c-b:
     print("a가 가깝다")
 if b-a==c-b:
     print("서로 같다")
+    ㅇㅇ
