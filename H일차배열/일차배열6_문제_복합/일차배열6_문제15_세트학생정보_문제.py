@@ -16,4 +16,26 @@
 
 a = [1001, 100, 20, 1002, 32, 54, 1003, 34, 65]
 
+total=0
+for i in range(len(a)):
+    if i%3==0:
+        total=total+a[i+1]+a[i+2]
+avg=total/3
+print("평균=", avg)
 
+kormax=0
+koridx=0
+mathmax=0
+mathidx=0
+
+for i in range(len(a)):
+    if i%3==1:
+        if kormax < a[i]:
+            kormax=a[i]
+            koridx=i
+    if i%3==2:
+        if mathmax < a[i]:
+            mathmax=a[i]
+            mathidx=i
+print("국어 탑 =", a[koridx-1], kormax)
+print("수학 탑 =", a[mathidx-2], mathmax)

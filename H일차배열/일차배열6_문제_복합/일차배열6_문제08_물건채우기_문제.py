@@ -21,3 +21,14 @@
 list = [3, 5, 2, 1, 2]
 count = 6
 
+for i in range(len(list)):
+    if list[i] < 5 and count > 0:
+        item=5-list[i]
+        if count-item > 0:
+            list[i]+=item
+            count-=item
+        else:
+            list[i]+=count
+            count=0
+print(list)
+print(count)

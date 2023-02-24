@@ -29,6 +29,33 @@
 		map2 = [0,0,0,0,0,0,0,0,0,0]
 			
 '''
-
+import random
 map1 = [1,0,0,0,0,0,0,0,0,0]
 map2 = [0,0,0,0,0,0,0,0,0,0]
+
+position = 0
+turn = True
+size = len(map1)
+
+for i in range(4):
+    r1=random.randint(1,6)
+    r2=random.randint(1,6)
+    total=r1+r2
+    print("주사위", r1, r2, "=", total)
+    if turn:
+        map1[position]=0
+    else:
+        map2[position]=0
+    print("position =", position)
+    if position + total >= size:
+        turn = not turn
+    if turn:
+        position += total
+        position %= size
+        map1[position] = 1
+    else:
+        position += total
+        position %= size
+        map2[position] = 1
+print("map1 =", map1, turn)
+print("map2 =", map2, turn)

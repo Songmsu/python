@@ -10,6 +10,34 @@
       6. 같은 인덱스 선택할 수 없다. 
       7. 이미 선택한 자리를 또 선택할 수 없다. 
 '''
+import random
 
 front = [10,10,20,20,30,30,40,40,50,50]
 back = [0,0,0,0,0,0,0,0,0,0]
+
+
+for i in range(100):
+    idx1=random.randint(0, len(front)-1)
+    idx2=random.randint(0, len(front)-1)
+
+    temp=front[idx1]
+    front[idx1]=front[idx2]
+    front[idx2]=temp
+
+count=0
+while True:
+    if count == len(front)//2:
+        break
+    
+    idx1=random.randint(0, len(front)-1)
+    idx2=random.randint(0, len(front)-1)
+    print(idx1, idx2)
+
+    if idx1 != idx2:
+        if back[idx1]==0 and back[idx2]==0 and front[idx1]==front[idx2]:
+            back[idx1]=front[idx1]
+            back[idx2]=front[idx2]
+            count+=1
+
+            print("front=", front)
+            print("back=",back)

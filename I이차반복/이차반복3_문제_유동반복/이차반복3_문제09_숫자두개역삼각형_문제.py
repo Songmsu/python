@@ -7,3 +7,9 @@
 		1 2 3 4
 		1 2
 '''
+
+for i in range(4):
+    len=(4-i)*2
+    for j in range(len):
+        print(j + 1, end=" ")
+    print()

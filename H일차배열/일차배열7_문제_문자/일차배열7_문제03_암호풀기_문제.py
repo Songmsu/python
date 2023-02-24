@@ -9,3 +9,11 @@
         qwer1234
 '''
 password = "qawbecrd1e2f3g4h"
+
+word= ""
+
+for i in range(len(password)):
+    if i%2==0:
+        word+=password[i]
+password=word
+print(password)

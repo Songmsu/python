@@ -13,24 +13,17 @@
 		80, 50, 40, 30, 19, 10	
 '''
 score = [10, 50, 30, 40, 80, 19]
+score.sort(reverse=True)
+print(score)
 
-i = 0
-while i < len(score):
-
-	max = score[i]
-	maxIndex = i
-
-	j = i
-	while j < len(score):
-		if max < score[j]:
-			max = score[j]
-			maxIndex = j
-		j += 1
-		
-	temp = score[i]
-	score[i] = score[maxIndex]
-	score[maxIndex] = temp
-
-	i += 1
-
+max=0
+maxidx=0
+for i in range(len(score)):
+    for j in range(len(score)):
+    	if max < score[j]:
+            max=score[j]
+            maxidx=j
+    temp=score[i]
+    score[i]=score[maxidx]
+    score[maxidx]=temp
 print(score)

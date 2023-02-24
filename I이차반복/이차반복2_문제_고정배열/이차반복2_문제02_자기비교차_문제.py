@@ -13,4 +13,14 @@
 a = [10, 20, 30, 40]
 total = []
 
+for i in range(len(a)):
+    score=0
+    for j in range(len(a)):
+        if i != j:
+            score+=a[j]
+    result=a[i]-score
+    total.append(result)
+
+print(total)
+
 

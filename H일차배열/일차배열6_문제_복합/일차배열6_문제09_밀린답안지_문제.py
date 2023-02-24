@@ -15,6 +15,12 @@
 정답 = [1,4,3,3,2]
 밀린답 = [0,1,4,3,2]
 
+count=0
+for i in range(len(정답)-1):
+    if 정답[i]==밀린답[i+1]:
+        count+=1
+score=count*20
+print(score)
 
 
 

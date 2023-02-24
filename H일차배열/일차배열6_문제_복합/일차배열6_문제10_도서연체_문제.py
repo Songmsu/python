@@ -11,4 +11,38 @@
 '''
 monthList = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
+lastyear = 2021
+lastmonth = 10
+lastday = 10
 
+thisyear = 2022
+thismonth = 2
+thisday = 25
+
+total=0
+if thisyear - lastyear > 1:
+    total += (thisyear-lastyear)*365
+    total += monthList[lastmonth-1]-lastday
+    
+    i = lastmonth
+    while i < len(monthList):
+        total += monthList[i]
+        i+=1
+    print(total)
+elif thisyear - lastyear == 1:
+    total += monthList[lastmonth-1] - lastday
+    i=lastmonth
+    while i < len(monthList):
+        total+=monthList[i]
+        i+=1
+    print(total)
+
+i=0
+while i < thismonth - 1:
+    total += monthList[i]
+    i += 1
+total += thisday
+print(total)
+
+price=(total-20)*100
+print(price)

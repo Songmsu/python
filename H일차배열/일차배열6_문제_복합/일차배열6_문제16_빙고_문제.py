@@ -8,3 +8,21 @@
 a = [0, 0, 1,
      0, 1, 1,
      1, 0, 1]
+
+count=0
+
+for i in range(len(a)):
+    if i%3==0:
+        if a[i]+a[i+1]+a[i+2] == 3:
+            count+=1
+
+for i in range(3):
+    if a[i]==1 and a[i+3]==1 and a[i+6]==1:
+        count+=1
+
+if a[2]==1 and a[4]==1 and a[6]==1:
+    count+=1
+if a[0]==1 and a[4]==1 and a[8]==1:
+    count+=1
+
+print(count)

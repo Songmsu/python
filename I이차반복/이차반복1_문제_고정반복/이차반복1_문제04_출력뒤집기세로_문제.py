@@ -13,5 +13,12 @@
 		13 7 1
 '''
 
+import random
+r=random.randint(3,6)
+print("r=", r)
+a=r*3
+b=r*2
+c=r
 
-
+for i in range(r):
+    print(a-i, b-i, c-i)

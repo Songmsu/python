@@ -12,5 +12,23 @@ stname = ["김철수" , "이만수" , "신정아" , "이영희"]
 stkor = [8 , 25 , 34 , 40]
 steng = [60 , 30 , 32 , 23]
 
+temp=0
+
+r1=random.randint(0,len(stno)-1)
+r2=random.randint(0,len(stno)-1)
+print(r1, r2)
+print(stno[r1], stno[r2])
+
+temp=stkor[r1]
+stkor[r1]=stkor[r2]
+stkor[r2]=temp
+print(stkor)
+
+maxscore=0
 
 
+for i in range(len(stno)):
+    sumscore=stkor[i]+steng[i]
+    if maxscore < sumscore:
+        maxscore=sumscore
+print(stname[i], maxscore)

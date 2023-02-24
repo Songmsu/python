@@ -8,3 +8,8 @@
 		1 2 3 4 5 6 7 8
 '''
 
+for i in range(4):
+    len=(i+1)*2
+    for j in range(len):
+        print(j+1, end=" ")
+    print()

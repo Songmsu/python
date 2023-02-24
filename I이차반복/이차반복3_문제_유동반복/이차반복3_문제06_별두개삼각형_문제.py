@@ -9,3 +9,8 @@
 		********
 '''
 
+for i in range(4):
+	len = (i + 1) * 2
+	for j in range(len):
+		print("*", end="")
+	print()

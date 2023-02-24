@@ -14,6 +14,14 @@ stno = [1001, 1002, 1003, 1004]
 stname = ["김철수" , "이만수" , "신정아" , "이영희"]
 stkor = [10 , 20 , 30 , 40]
 steng = [60 , 80 , 32 , 13]
+temp=0
 
+r1=random.randint(0,len(stno)-1)
+r2=random.randint(0,len(stno)-1)
+print(r1, r2)
+print(stno[r1], stno[r2])
 
-
+temp=stkor[r1]
+stkor[r1]=stkor[r2]
+stkor[r2]=temp
+print(stkor)

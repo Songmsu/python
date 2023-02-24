@@ -10,3 +10,11 @@
 		1
 '''
 
+for i in range(6):
+    num=1
+    for j in range(6-i):
+        print(num, end=" ")
+        num+=1
+        if num==4:
+            num=1
+    print()

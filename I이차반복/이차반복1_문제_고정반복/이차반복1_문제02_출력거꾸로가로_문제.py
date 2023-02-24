@@ -13,6 +13,18 @@
 		18 17 16
 '''
 
+import random
+r=random.randint(3,6)
+print ("r =",r)
 
+for i in range(r):
+    num=3*i+3
+    print(num, num-1, num-2)
+    
+for i in range(r):
+    num=3*i+3
+    for j in range(3):
+        print(num-j,end =" ")
+    print()
 
 

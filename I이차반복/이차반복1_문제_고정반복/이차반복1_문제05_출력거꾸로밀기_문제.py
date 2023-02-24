@@ -10,5 +10,25 @@
 		5 4 3
 		6 5 4
 '''
+import random
+r=random.randint(3,6)
+print("r=", r)
+i=0
+while True:
+    a=3+i
+    b=2+i
+    c=1+i
+    print(a,b,c)
+    if r==a:
+        break
+    i+=1
+    
+print(" --------------- ")
 
-
+i=3
+while i<=r:
+    for j in range(3):
+        print(i-j, end=" ")
+    print()
+    i+=1
+    

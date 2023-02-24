@@ -31,3 +31,7 @@ c = 'hello world'
 print(c)
 c = c.replace('h' , 'k')
 print(c)
+
+a= 'python'
+a= a.replace('y','i')
+print(a)

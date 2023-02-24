@@ -25,3 +25,10 @@
 		9 X 9 = 81
 '''
 
+for i in range(8):
+    a = i + 2
+    for j in range(9):
+        b = j + 1
+        c = a * b
+        print(a, " X ", b, " = ", c)
+    print()

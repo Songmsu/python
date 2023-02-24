@@ -10,3 +10,33 @@
 		4 3 2
 		3 2 1
 '''
+import random
+r = random.randint(3, 6)
+print("r=", r)
+
+i = 0
+while True:
+    x = r - i
+    y = r - 1 - i
+    z = r - 2 - i
+
+    print(x, y, z)
+
+    if z == 1:
+        break
+
+    i += 1
+
+print("---------")
+
+num = r
+while True:
+
+    for i in range(3):
+        print(num - i, end=" ")
+    print()
+
+    if num - 2 == 1:
+        break
+
+    num -= 1

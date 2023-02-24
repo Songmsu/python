@@ -18,3 +18,20 @@
 
 a = [3, 1, 2, 7, 2, 3, 4, 6, 1]
 
+count = 0
+maxcount = 0
+start=0
+end=1
+for i in range(len(a)-1):
+    print(a[start], a[end])
+    if a[start] < a[end]:
+        start=end
+        end+=1
+        count+=1
+    else:
+        start=i+1
+        end=start+1
+        count=0
+    if maxcount < count:
+        maxcount=count
+print(maxcount)

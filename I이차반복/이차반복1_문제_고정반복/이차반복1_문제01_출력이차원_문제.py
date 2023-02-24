@@ -12,3 +12,15 @@
 		5 5 5
 		6 6 6
 '''
+import random
+r=random.randint(3,6)
+print("r=", r)
+for i in range (r):
+    print (i+1, i+1, i+1)
+    
+
+for i in range (r):
+    num=i+1
+    for j in range (3):
+        print(num, end=" ")
+    print()
